@@ -238,21 +238,27 @@ if (canHover) {
   });
 }
 
-// =========================================================
-// PRÓXIMAS SALIDAS · datos editables sin tocar HTML
-// No se publican fechas inventadas: cada salida queda como
-// "próxima fecha a confirmar" hasta que Lumini la actualice.
-// =========================================================
-const departures = [
-  {title:'La Cumbrecita + Villa General Belgrano', detail:'Sierras · pueblos · paisajes', target:'viajes-a-la-cumbrecita'},
-  {title:'Mina Clavero + Cura Brochero', detail:'Altas Cumbres · Traslasierra', target:'viajes-a-mina-clavero'},
-  {title:'Capilla del Monte + Los Cocos', detail:'Sierras · norte de Córdoba', target:'viajes-a-capilla-del-monte'}
-];
-const departuresList = document.querySelector('#departures-list');
-if (departuresList) {
-  departuresList.innerHTML = departures.map((d,i) => `
-    <article class="departure-card">
-      <div><small>0${i+1} · PRÓXIMA SALIDA</small><h4>${d.title}</h4><p>${d.detail}</p></div>
-      <div class="departure-footer"><span class="departure-status">Fecha a confirmar</span><a href="seo/${d.target}/index.html">Ver destino ↗</a></div>
-    </article>`).join('');
+
+// Rotación de experiencias: pausa explícita, al enfocar y al pasar el cursor.
+const carousel = document.querySelector('.event-carousel');
+if (carousel) {
+ const slides = [...carousel.querySelectorAll('.event-slide')];
+ const dots = [...carousel.querySelectorAll('[data-slide]')];
+ const pauseButton = carousel.querySelector('.carousel-pause');
+ const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+ let current = 0, paused = motion.matches, hovering = false, focused = false;
+ const show = index => { current=(index+slides.length)%slides.length; slides.forEach((slide,i)=>{slide.hidden=i!==current;}); dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===current))); };
+ const updatePause = () => { pauseButton.textContent=paused?'Reanudar':'Pausar'; pauseButton.setAttribute('aria-label',paused?'Reanudar rotación automática':'Pausar rotación automática'); };
+ const manual = index => { paused=true;updatePause();show(index); };
+ carousel.querySelector('.carousel-prev').addEventListener('click',()=>manual(current-1));
+ carousel.querySelector('.carousel-next').addEventListener('click',()=>manual(current+1));
+ dots.forEach((dot,i)=>dot.addEventListener('click',()=>manual(i)));
+ pauseButton.addEventListener('click',()=>{paused=!paused;updatePause();});
+ carousel.addEventListener('mouseenter',()=>{hovering=true;});
+ carousel.addEventListener('mouseleave',()=>{hovering=false;});
+ carousel.addEventListener('focusin',()=>{focused=true;});
+ carousel.addEventListener('focusout',e=>{focused=carousel.contains(e.relatedTarget);});
+ motion.addEventListener('change',e=>{if(e.matches){paused=true;updatePause();}});
+ setInterval(()=>{if(!paused&&!hovering&&!focused&&!document.hidden)show(current+1);},6500);
+ updatePause();
 }
