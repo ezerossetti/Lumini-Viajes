@@ -1,9 +1,11 @@
-VIDEOS REALES DE LUMINI
+ASIGNACIÓN DE VIDEOS PENDIENTE
 
-Portada: lumini-portada.mp4 (IMG_7277.mov), sin sonido, con pausa y reproducción manual en celular.
-Flota: lumini-sprinter.mp4 (IMG_4048.mov).
-Carrusel: lumini-viajes.mp4 (IMG_3282.mov), lumini-escapadas.mp4 (IMG_4452.mov), lumini-grupos.mp4 (IMG_7746.mov), lumini-sierras.mp4 (IMG_9169.mov).
+Los clips lumini-*.mp4 se conservan como material disponible, pero no están asignados a portada, flota, eventos ni localidades.
+Definir con el cliente el uso de cada video antes de conectarlo a la web.
 
-MP4 H.264 a 30 fps, hasta 1280 px. Los videos de flota y carrusel conservan el audio original en AAC.
-Los cuatro clips del carrusel muestran la flota en viaje; no se atribuyen a festivales específicos.
-Los otros cuatro MOV quedan en el ZIP original y no se cargan en la web.
+TARJETAS DE LOCALIDADES
+Configurar destinationVideos en script.js con la ruta del clip confirmado para cada data-destination.
+Mantener un valor vacío mientras no haya material aprobado: no se descarga ni se solicita un video inexistente.
+Al entrar el mouse: carga y reproducción silenciosa dentro de la tarjeta.
+Al salir: pausa, reinicio y regreso inmediato a la imagen.
+En pantallas táctiles o con movimiento reducido se mantiene la imagen. El enlace Ver destino sigue funcionando.

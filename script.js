@@ -211,33 +211,50 @@ if (mapEl && window.maptilersdk) {
 // Carga videos locales sólo cuando el usuario los previsualiza.
 // En móvil se mantiene la foto para cuidar datos y rendimiento.
 // =========================================================
-const destinationCards = document.querySelectorAll('.destination-interactive');
-const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-if (canHover) {
-  destinationCards.forEach(card => {
-    const video = card.querySelector('.destination-preview');
-    const src = card.dataset.video;
-    if (!video || !src) return;
-    let tested = false;
-    const loadPreview = () => {
-      if (tested) return;
-      tested = true;
-      video.src = src;
-      video.addEventListener('loadeddata', () => card.classList.add('has-video'), {once:true});
-      video.addEventListener('error', () => { card.classList.remove('has-video'); }, {once:true});
-      video.load();
-    };
-    card.addEventListener('mouseenter', () => {
-      loadPreview();
-      video.play().catch(()=>{});
-    });
-    card.addEventListener('mouseleave', () => {
-      video.pause();
-      try { video.currentTime = 0; } catch(e) {}
-    });
-  });
-}
-
+// Asignar únicamente material confirmado para cada localidad.
+// Ejemplo: 'viajes-a-villa-general-belgrano': 'assets/videos/villa-general-belgrano.mp4'
+const destinationVideos = {
+ 'viajes-a-la-cumbrecita': '',
+ 'viajes-a-villa-general-belgrano': '',
+ 'excursiones-villa-carlos-paz': '',
+ 'viajes-a-mina-clavero': '',
+ 'excursiones-cordoba': '',
+ 'viajes-a-capilla-del-monte': ''
+};
+const destinationHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+const destinationMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const stopDestinationPreviews = [];
+document.querySelectorAll('.destination-interactive').forEach(card => {
+ const video = card.querySelector('.destination-preview');
+ const src = destinationVideos[card.dataset.destination];
+ const label = card.querySelector('.destination-preview-label');
+ if (!video || !src) return; // Sin asignación: no se solicita ningún archivo.
+ if (label) label.textContent = 'MANTENÉ EL MOUSE PARA VER';
+ let active = false, ticket = 0;
+ const stop = () => {
+  active = false; ticket++;
+  card.classList.remove('has-video'); video.pause();
+  try { video.currentTime = 0; } catch (_) {}
+ };
+ const start = () => {
+  if (!destinationHover.matches || destinationMotion.matches || document.hidden) return;
+  active = true; const request = ++ticket;
+  video.muted = true;
+  if (!video.getAttribute('src')) { video.src = src; video.load(); }
+  video.play().then(() => {
+   if (active && request === ticket) card.classList.add('has-video');
+   else if (!active) { video.pause(); try {video.currentTime=0;} catch (_) {} }
+  }).catch(() => { if (request === ticket) card.classList.remove('has-video'); });
+ };
+ card.addEventListener('mouseenter',start);
+ card.addEventListener('mouseleave',stop);
+ video.addEventListener('error',()=>{stop();if(label)label.textContent='VIDEO NO DISPONIBLE';});
+ new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)stop();}).observe(card);
+ stopDestinationPreviews.push(stop);
+});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopDestinationPreviews.forEach(stop=>stop());});
+destinationHover.addEventListener('change',()=>stopDestinationPreviews.forEach(stop=>stop()));
+destinationMotion.addEventListener('change',()=>stopDestinationPreviews.forEach(stop=>stop()));
 
 // Rotación de experiencias: pausa explícita, al enfocar y al pasar el cursor.
 const carousel = document.querySelector('.event-carousel');
@@ -263,20 +280,3 @@ if (carousel) {
  updatePause();
 }
 
-// Los clips reales se cargan al acercarse a la sección; no descargan datos hasta reproducirlos.
-const localVideos = document.querySelectorAll('video[data-src]:not(#hero-video)');
-const prepareVideo = video => { if (!video.getAttribute('src')) { video.src=video.dataset.src; video.load(); } };
-const videoObserver = new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){prepareVideo(entry.target);videoObserver.unobserve(entry.target);}}),{rootMargin:'160px'});
-localVideos.forEach(v=>videoObserver.observe(v));
-const heroVideo = document.querySelector('#hero-video');
-const heroToggle = document.querySelector('.hero-video-toggle');
-if (heroVideo && heroToggle) {
- const updateHeroButton=()=>{heroToggle.textContent=heroVideo.paused?'Reproducir video':'Pausar video';};
- heroToggle.addEventListener('click',()=>{if(heroVideo.paused){prepareVideo(heroVideo);heroVideo.play().catch(updateHeroButton);}else heroVideo.pause();});
- heroVideo.addEventListener('play',updateHeroButton);heroVideo.addEventListener('pause',updateHeroButton);
- const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
- if (!reduceMotion.matches && window.matchMedia('(min-width: 900px)').matches && !navigator.connection?.saveData) {prepareVideo(heroVideo);heroVideo.play().catch(updateHeroButton);}
- reduceMotion.addEventListener('change',e=>{if(e.matches)heroVideo.pause();});
- new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)heroVideo.pause();}).observe(heroVideo);
- document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>v.pause());});
-}
