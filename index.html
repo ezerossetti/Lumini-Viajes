@@ -9,9 +9,11 @@
   <meta name="theme-color" content="#a91924">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Caveat:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=experiencias-editorial-8">
+  <link rel="stylesheet" href="style.css?v=portada-costanera-9">
+  <link rel="stylesheet" href="about.css?v=5">
+  <link rel="stylesheet" href="transfers.css?v=1">
   <link rel="icon" href="assets/favicon.svg?v=lumini-icon-3" type="image/svg+xml">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:title" content="Lumini Viajes | Traslados y viajes desde Villa Carlos Paz y Córdoba">
@@ -52,7 +54,7 @@
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero-bg pending-hero"></div><span class="hero-media-pending">Colocar foto o video</span>
+      <div class="hero-bg hero-cover"><img src="assets/images/lumini-portada-costanera.png?v=2" width="1672" height="941" alt="Lumini Viajes junto al lago y las sierras. Cada viaje, una experiencia." fetchpriority="high" decoding="async"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
         <p class="eyebrow">TRANSPORTE · TURISMO · EXPERIENCIAS</p>
@@ -73,57 +75,73 @@
     <section class="upcoming-events dark-section" id="eventos" aria-labelledby="upcoming-title">
       <div class="upcoming-heading"><p class="eyebrow">VIAJÁ CON LUMINI</p><h2 id="upcoming-title">Próximos <em>eventos.</em></h2><p>Elegí tu evento y consultanos por el traslado.</p></div>
       <div id="events-list" class="experience-list"></div>
+      <div class="events-transition" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 42 C180 112 390 16 660 22 C950 28 1110 105 1440 48 L1440 110 L0 110 Z" fill="var(--about-paper)"/>
+        </svg>
+      </div>
     </section>
 
-    <section class="section about" id="nosotros">
-      <div class="section-tag">01 · NOSOTROS</div>
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p class="eyebrow dark">QUIÉNES SOMOS</p>
-          <h2>Más que transportar personas,<br><em>acompañamos cada viaje.</em></h2>
-          <p>Con más de 20 años de experiencia, somos una empresa familiar dedicada al transporte de pasajeros y al turismo.</p>
-          <p>A lo largo de estos años construimos nuestra trayectoria sobre tres pilares: <strong>compromiso, seriedad y puntualidad.</strong> Trabajamos para brindar un servicio seguro, confiable y personalizado, adaptándonos a las necesidades de cada pasajero, grupo e institución.</p>
-          <div class="pillars">
-            <span>Compromiso</span><span>Seriedad</span><span>Puntualidad</span>
+    <section class="about-editorial" id="nosotros" aria-labelledby="about-title">
+      <div class="about-editorial-inner">
+        <p class="about-label">01 · NOSOTROS</p>
+        <div class="about-editorial-grid">
+          <div class="about-story reveal">
+            <p class="eyebrow dark">QUIÉNES SOMOS</p>
+            <h2 id="about-title">Más que transportar<br>personas,<br><em>acompañamos cada viaje.</em></h2>
+            <p>Con más de 20 años de experiencia, somos una empresa familiar dedicada al transporte de pasajeros y al turismo.</p>
+            <p>A lo largo de estos años construimos nuestra trayectoria sobre tres pilares: <strong>compromiso, seriedad y puntualidad.</strong> Trabajamos para brindar un servicio seguro, confiable y personalizado, adaptándonos a las necesidades de cada pasajero, grupo e institución.</p>
+          </div>
+          <div class="about-composition">
+            <p class="about-photo-note about-handwriting">Una buena experiencia<br>empieza en el camino.</p>
+            <figure class="about-main-photo reveal">
+              <img src="assets/images/lumini-nosotros.jpg" alt="El equipo de Lumini junto a su vehículo durante un viaje por las sierras" loading="lazy" width="563" height="1000">
+              <figcaption><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg><span><b>LUMINI VIAJES</b><small>CÓRDOBA, ARGENTINA</small></span></figcaption>
+            </figure>
+            <figure class="about-polaroid reveal">
+              <img src="assets/images/lumini-viajes.jpg" alt="Vehículo de Lumini en una parada junto al lago San Roque" loading="lazy" width="720" height="1280">
+              <figcaption class="about-handwriting">Los mejores viajes<br>también se comparten.</figcaption>
+            </figure>
+            <svg class="about-stamp" viewBox="0 0 110 110" role="img" aria-label="Experiencias que conectan">
+              <defs><path id="about-stamp-top" d="M 15 55 A 40 40 0 0 1 95 55"/><path id="about-stamp-bottom" d="M 13 56 A 42 42 0 0 0 97 56"/></defs>
+              <circle cx="55" cy="55" r="53"/><circle cx="55" cy="55" r="49" class="about-stamp-ring"/>
+              <text><textPath href="#about-stamp-top" startOffset="50%" text-anchor="middle">EXPERIENCIAS</textPath></text>
+              <text><textPath href="#about-stamp-bottom" startOffset="50%" text-anchor="middle">QUE CONECTAN</textPath></text>
+              <path d="m33 62 15-19 12 16m-16-8 15-20 19 31m-22-9 11-12 10 18" class="about-stamp-mountains"/>
+            </svg>
+          </div>
+          <ul class="about-values">
+            <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span><b>Compromiso</b><small>Con cada persona</small></span></li>
+            <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 4v5c0 6-9 10-9 10S3 18 3 12V7zM8 12l3 3 5-6"/></svg><span><b>Seriedad</b><small>En cada detalle</small></span></li>
+            <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 3"/></svg><span><b>Puntualidad</b><small>Siempre a tiempo</small></span></li>
+          </ul>
+          <div class="about-editorial-signoff">
+            <p class="about-handwriting">Gente real,<br>viajes que importan.</p>
+            <p class="about-signoff-type">EXPERIENCIA<br>QUE TE LLEVA MÁS LEJOS.</p>
           </div>
         </div>
-        <div class="about-photo reveal">
-          <img src="assets/images/lumini-nosotros.jpg" alt="La flota y el equipo de Lumini durante un viaje" loading="lazy">
-          <div class="photo-caption"><span>LUMINI VIAJES</span><b>Una buena experiencia empieza en el camino.</b></div>
-        </div>
+      </div>
+      <div class="about-next-preview">
+        <svg class="about-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V5C1230 112 1030 82 800 58S570 21 365 50S150 78 0 35Z"/></svg>
       </div>
     </section>
 
-    <section class="section transfers dark-section" id="traslados">
-      <div class="section-tag light">02 · TRASLADOS</div>
-      <div class="section-heading light">
-        <div><p class="eyebrow">SERVICIO A MEDIDA</p><h2>Nos movemos<br><em>por vos.</em></h2></div>
-        <p>Coordinamos cada traslado de acuerdo con cantidad de pasajeros, horarios, recorridos y necesidades específicas.</p>
-      </div>
-
-      <div class="transfer-feature reveal">
-        <img src="assets/images/lumini-portada.jpg" alt="Vehículo de Lumini Viajes con su identificación original" loading="lazy">
-        <div class="transfer-feature-content">
-          <span>TRANSPORTE PRIVADO</span>
-          <h3>Del punto de partida<br>al destino.</h3>
-          <a href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20necesito%20un%20presupuesto%20para%20un%20traslado." target="_blank" rel="noopener">Armá tu presupuesto →</a>
+    <section class="transfers-editorial" id="traslados" aria-labelledby="transfers-title">
+      <div class="transfers-inner">
+        <div class="transfers-kicker"><p>02 · TRASLADOS</p><span>NUEVOS DESTINOS.<br>LAS MISMAS BUENAS COMPAÑÍAS.</span></div>
+        <div class="transfers-intro">
+          <div class="transfers-heading reveal"><h2 id="transfers-title">Nos movemos<br><em>por vos.</em></h2><p>Coordinamos cada traslado de acuerdo con cantidad de pasajeros, horarios, recorridos y necesidades específicas.</p></div>
+          <img class="transfers-van" src="assets/images/lumini-traslados-van.png" alt="Combi blanca de Lumini Viajes, vista de frente y de costado" loading="lazy" width="532" height="646">
+          <div class="transfers-note" aria-hidden="true"><p>Seguimos<br>viajando</p><span>PERSONAS<br>DESTINOS<br>HISTORIAS</span></div>
         </div>
-      </div>
-
-      <div class="service-cards">
-        <article class="service-card"><span class="service-number">01</span><div class="icon">✈</div><h3>Aeropuertos<br>y terminales</h3><p>Traslados hacia y desde los principales puntos de conexión.</p></article>
-        <article class="service-card"><span class="service-number">02</span><div class="icon">⌂</div><h3>Hoteles y<br>alojamientos</h3><p>Movilidad para grupos y pasajeros durante su estadía.</p></article>
-        <article class="service-card"><span class="service-number">03</span><div class="icon">＋</div><h3>Instituciones<br>educativas</h3><p>Traslados para colegios, estudiantes y contingentes.</p></article>
-        <article class="service-card"><span class="service-number">04</span><div class="icon">★</div><h3>Eventos</h3><p>Festivales, recitales, eventos deportivos y celebraciones.</p></article>
-        <article class="service-card"><span class="service-number">05</span><div class="icon">▦</div><h3>Empresas y<br>corporativos</h3><p>Reuniones, congresos, convenciones y actividades empresariales.</p></article>
-        <article class="service-card"><span class="service-number">06</span><div class="icon">◎</div><h3>Grupos y<br>contingentes</h3><p>Unidades de diferentes capacidades para adaptarnos a cada grupo.</p></article>
-      </div>
-
-      <div class="custom-service">
+        <div class="transfers-services"><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-viajes.jpg" alt="" loading="lazy"><span class="transfer-service-number">01</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7ZM11 13l11-11"/></svg><div class="transfer-service-copy"><h3>Aeropuertos y<br>terminales</h3><p>Traslados hacia y desde los principales puntos de conexión.</p></div></article><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-traslados-van.png" alt="" loading="lazy"><span class="transfer-service-number">02</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V7m18 14V11H3m0 6h18M7 11V5h10v6"/><path d="M3 15h18"/></svg><div class="transfer-service-copy"><h3>Hoteles y<br>alojamientos</h3><p>Movilidad para grupos y pasajeros durante su estadía.</p></div></article><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-grupos.jpg" alt="" loading="lazy"><span class="transfer-service-number">03</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5-10-5Zm4 3v7c4 3 8 3 12 0v-7m4-3v9"/></svg><div class="transfer-service-copy"><h3>Instituciones<br>educativas</h3><p>Traslados para colegios, estudiantes y contingentes.</p></div></article><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-nosotros.jpg" alt="" loading="lazy"><span class="transfer-service-number">04</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4V5Z"/><path d="m12 8 1 3 3 .5-2.2 2  .6 3-2.4-1.5-2.4 1.5.6-3-2.2-2 3-.5Z"/></svg><div class="transfer-service-copy"><h3>Eventos</h3><p>Festivales, recitales, eventos deportivos y celebraciones.</p></div></article><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-escapadas.jpg" alt="" loading="lazy"><span class="transfer-service-number">05</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 13h18m-11-2v4h4v-4"/></svg><div class="transfer-service-copy"><h3>Empresas y<br>corporativos</h3><p>Reuniones, congresos, convenciones y actividades empresariales.</p></div></article><article class="transfer-service"><img class="transfer-service-photo" src="assets/images/lumini-sprinter.jpg" alt="" loading="lazy"><span class="transfer-service-number">06</span><svg class="transfer-service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3M5 5a3 3 0 0 0 0 6m14-6a3 3 0 0 1 0 6M2 21v-4a4 4 0 0 1 2-3m18 7v-4a4 4 0 0 0-2-3"/></svg><div class="transfer-service-copy"><h3>Grupos y<br>contingentes</h3><p>Unidades de diferentes capacidades para adaptarnos a cada grupo.</p></div></article></div>
+        <div class="custom-service">
         <div><span class="eyebrow">SERVICIO A MEDIDA</span><h3>¿Tenés un viaje en mente?</h3></div>
         <p>Contanos cantidad de pasajeros, horarios y recorrido. Te armamos un presupuesto personalizado.</p>
         <a class="btn btn-red" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20armar%20un%20presupuesto%20personalizado." target="_blank" rel="noopener">Consultar ahora →</a>
       </div>
+      </div>
+      <svg class="transfers-bottom-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 37 C190 108 340 32 560 52 C790 72 940 126 1440 31 L1440 100 L0 100Z"/></svg>
     </section>
 
     <section class="section excursions" id="excursiones">
@@ -265,6 +283,6 @@
 
   <a class="floating-wa" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="29" height="29" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.04 0C5.44 0 .07 5.37.06 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.98 11.98 0 0 0 5.83 1.49h.01c6.6 0 11.97-5.37 11.97-11.97a11.9 11.9 0 0 0-3.49-8.41ZM12.04 21.84a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.68.96.98-3.58-.23-.37a9.92 9.92 0 0 1-1.52-5.28C2.16 6.48 6.56 2.08 12.05 2.08a9.86 9.86 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.48-4.46 9.83-9.93 9.83Zm5.45-7.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.3 1.27.48 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg></a>
   <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.umd.min.js"></script>
-  <script src="script.js?v=experiencias-editorial-8"></script>
+  <script src="script.js?v=portada-costanera-9"></script>
 </body>
 </html>
