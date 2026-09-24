@@ -1,0 +1,5 @@
+@layer theme, utilities;
+@import "../coverage/node_modules/tailwindcss/theme.css" layer(theme);
+@import "../coverage/node_modules/tailwindcss/utilities.css" layer(utilities);
+@source "./QuoteSection.tsx";
+@import "./editorial.css";

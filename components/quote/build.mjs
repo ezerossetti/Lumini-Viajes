@@ -1,0 +1,14 @@
+import {build} from '../coverage/node_modules/esbuild/lib/main.js';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import React from '../coverage/node_modules/react/index.js';
+import {renderToStaticMarkup} from '../coverage/node_modules/react-dom/server.node.js';
+process.chdir(new URL('.',import.meta.url).pathname.replace(/^\/(?:([A-Za-z]:))/, '$1'));
+await build({entryPoints:['QuoteSection.tsx'],bundle:true,platform:'node',format:'esm',packages:'external',external:['../coverage/node_modules/react/index.js'],outfile:'.quote-build.mjs'});
+const {default:QuoteSection}=await import('./.quote-build.mjs?'+Date.now());
+execFileSync(process.execPath,['../coverage/node_modules/@tailwindcss/cli/dist/index.mjs','-i','input.css','-o','../../quote.css','--minify'],{stdio:'inherit'});
+let html=readFileSync('../../index.html','utf8');
+html=html.replace(/<section class="section build-trip quote-editorial"[\s\S]*?<\/section>/,renderToStaticMarkup(React.createElement(QuoteSection)));
+html=html.replace(/quote.css\?v=[^" ]+/, 'quote.css?v=3');
+writeFileSync('../../index.html',html);
+console.log('Cotización React + Tailwind compilada en la landing.');

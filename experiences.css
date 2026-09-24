@@ -34,4 +34,16 @@
 }
 @media(min-width:1101px){#experiencias .photo-carousel{width:106%;max-width:1590px;left:50%;transform:translateX(-50%);margin-left:0;margin-right:0}}
 @media(min-width:1600px){#servicios.services-editorial{min-height:736px}}
-@media(max-width:767px){#experiencias.experiences-editorial{padding-top:48px}#experiencias .section-heading{margin-bottom:16px}#servicios.services-editorial{padding-bottom:75px}#servicios .services-bottom-wave{height:48px}}
+@media(max-width:767px){#experiencias.experiences-editorial{padding-top:48px}#experiencias .section-heading{margin-bottom:16px}#servicios.services-editorial{padding-bottom:75px}#servicios .services-bottom-wave{height:48px}}/* Lower-only fade from the slider into the warm quotation background. */
+#experiencias.experiences-editorial{background:linear-gradient(180deg,#e9e6e0 0,#f1eee8 110px,#f1eee8 65%,var(--paper) 100%)}
+#experiencias .photo-carousel-panel{position:relative;isolation:isolate;border:0;box-shadow:none;border-radius:22px 22px 0 0}
+#experiencias .photo-carousel-panel::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:45%;pointer-events:none;z-index:2;background:linear-gradient(to bottom,rgba(10,10,10,0) 0%,rgba(245,243,239,.35) 35%,rgba(245,243,239,.75) 65%,#f5f3ef 100%)}
+#experiencias .experience-stage{isolation:auto}
+#experiencias .experience-stage-photo{z-index:0}
+#experiencias .experience-stage::before,#experiencias .experience-stage::after{z-index:1}
+#experiencias .experience-stage>:not(.experience-stage-photo){position:relative;z-index:3}
+#experiencias .experience-stage .experience-benefits{background:#0e1012eb;border-radius:8px;padding:12px;width:fit-content}
+#experiencias .experience-thumbnails{position:relative;z-index:3;background:transparent}
+@media(max-width:767px){#experiencias .experience-stage-photo{position:relative;z-index:3}#experiencias .experience-stage .experience-benefits{width:100%;padding:12px 0}}
+/* Keep slide content above the fade after the entrance animation finishes. */
+#experiencias .experience-stage.is-changing{animation-fill-mode:none}

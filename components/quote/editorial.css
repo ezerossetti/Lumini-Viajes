@@ -1,0 +1,55 @@
+#armatuviaje.quote-editorial{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(#f1eee8,var(--paper));padding:68px 0 78px;scroll-margin-top:82px}
+.quote-layout{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(35px,5vw,85px);width:86%;max-width:1450px;margin:auto;align-items:stretch}
+.quote-story{position:relative;min-height:580px;padding-bottom:245px;isolation:isolate}
+#armatuviaje .section-tag{position:static;display:flex;align-items:center;gap:16px;margin:0 0 27px;font-size:9px;letter-spacing:2.5px;color:#777}
+#armatuviaje .section-tag::after{content:"";width:50px;height:1px;background:var(--red)}
+#armatuviaje .eyebrow{font-size:10px;letter-spacing:2px;margin-bottom:14px}
+#armatuviaje h2{font:800 clamp(54px,5vw,82px)/.88 var(--display);letter-spacing:-1px;margin:0 0 20px;text-transform:uppercase}
+.quote-description{font-size:13px;line-height:1.75;color:#73716d;max-width:450px;margin:0 0 23px}
+.quote-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;margin:0;padding:0;max-width:490px}
+.quote-benefits li{padding:0 16px;border-left:1px solid #beb7ac65}.quote-benefits li:first-child{padding-left:0;border:0}.quote-benefits li:last-child{padding-right:0}
+.quote-benefits svg{display:block;width:32px;height:32px;padding:8px;box-sizing:content-box;color:#c72231;background:#a9192409;border-radius:50%;margin-bottom:10px}
+.quote-benefits h3{font:600 20px/1.03 var(--display);text-transform:uppercase;margin:0;color:#222}
+.quote-landscape{position:absolute;bottom:-60px;left:-9vw;right:-30px;height:335px;z-index:-1;margin:0;pointer-events:none;mask-image:linear-gradient(0deg,transparent,#000 18%,#000 56%,transparent 100%),linear-gradient(90deg,#000 35%,transparent 100%);mask-composite:intersect}
+.quote-landscape img{width:100%;height:100%;object-fit:cover;object-position:center 64%;filter:saturate(.76) contrast(1.12)}
+.quote-signature{position:absolute;bottom:110px;right:8%;font:400 30px/1.04 'Caveat',cursive;color:#282924;transform:rotate(-7deg);margin:0;text-align:center;text-shadow:0 1px 7px #f5f3ef}
+.quote-signature::after{content:"";display:block;width:120px;height:10px;border-top:2px solid var(--red);border-radius:50%;margin:10px 0 0 auto}
+#armatuviaje .trip-form{position:relative;align-self:center;background:#faf8f3;border:1px solid #ffffffc0;border-radius:18px;box-shadow:0 20px 45px #443a2a12;padding:30px;gap:16px 14px;grid-template-columns:1fr 1fr}
+.quote-form-heading{grid-column:1/-1;display:flex;gap:14px;align-items:center;margin-bottom:9px}.quote-form-heading>svg{width:25px;height:25px;box-sizing:content-box;padding:12px;border-radius:50%;background:#a919240a;color:var(--red)}
+.quote-form-heading h3{font:700 26px/1 var(--display);text-transform:uppercase;color:#151515;margin:0 0 7px}.quote-form-heading p{font-size:10px;line-height:1.5;color:#777;margin:0}
+#armatuviaje .trip-form label{font-size:10px;letter-spacing:0;text-transform:none;font-weight:500;gap:7px;color:#4d4b47}
+#armatuviaje .trip-form input,#armatuviaje .trip-form select,#armatuviaje .trip-form textarea{border-color:#d5d0c6;background:#f8f6f1;font-size:12px;padding:12px;min-height:43px;border-radius:3px}
+#armatuviaje .trip-form select{padding-right:32px}#armatuviaje .trip-form textarea{min-height:92px}#armatuviaje .trip-form input:focus,#armatuviaje .trip-form select:focus,#armatuviaje .trip-form textarea:focus{border-color:var(--red);background:#fff}
+#armatuviaje .trip-form .btn{font-size:9px;letter-spacing:1.2px;gap:10px;min-height:48px;padding:14px 12px;border-radius:3px}
+.quote-form-note{grid-column:1/-1;text-align:center;font-size:9px;line-height:1.6;color:#8b867e;margin:0}
+.quote-topography{position:absolute;inset:0;width:100%;height:100%;opacity:.15;pointer-events:none;z-index:0}
+@media(min-width:768px) and (max-width:1050px){.quote-layout{width:90%;gap:28px;grid-template-columns:1fr 1.1fr}#armatuviaje h2{font-size:58px}#armatuviaje .trip-form{padding:24px}.quote-benefits li{padding:0 10px}.quote-benefits h3{font-size:17px}.quote-signature{font-size:27px;right:0}}
+@media(max-width:767px){#armatuviaje.quote-editorial{padding:42px 0 52px;scroll-margin-top:72px}.quote-layout{width:88%;grid-template-columns:1fr;gap:15px}.quote-story{min-height:0;padding-bottom:215px}#armatuviaje h2{font-size:clamp(48px,13vw,64px)}.quote-description{font-size:13px}.quote-benefits li{padding:0 10px}.quote-benefits h3{font-size:18px}.quote-benefits svg{width:25px;height:25px;padding:8px}.quote-landscape{height:270px;bottom:-10px;right:-6vw;mask-image:linear-gradient(0deg,transparent,#000 20%,#000 55%,transparent 100%)}.quote-signature{bottom:72px;right:4%;font-size:27px}#armatuviaje .trip-form{padding:23px;gap:16px;grid-template-columns:1fr}#armatuviaje .trip-form label.full{grid-column:auto}.quote-form-heading h3{font-size:25px}.quote-form-heading>svg{padding:10px;width:22px;height:22px}#armatuviaje .trip-form input,#armatuviaje .trip-form select,#armatuviaje .trip-form textarea{font-size:16px}#armatuviaje .trip-form .btn{font-size:9px;line-height:1.5}}
+
+@media(max-width:767px){.quote-signature{color:#171916;text-shadow:0 1px 3px #faf8f3,0 0 12px #faf8f3;background:radial-gradient(ellipse,#f5f2ead9,transparent 72%);padding:10px 8px}}
+
+/* Composition matched to the quotation reference. */
+#armatuviaje.quote-editorial{padding:125px 0 130px;background:radial-gradient(ellipse at 20% 60%,#fff5e5aa,transparent 55%),linear-gradient(180deg,#e8e2da 0%,#f5f2ec 24%,#f1ece4 100%)}
+.quote-layout{width:72%;max-width:1180px;grid-template-columns:1fr 1fr;gap:clamp(50px,5vw,90px);align-items:start}
+.quote-story{min-height:510px;padding-bottom:150px;isolation:auto}
+#armatuviaje h2{font-size:clamp(56px,4.2vw,76px);line-height:.93;margin-bottom:16px}
+.quote-description{line-height:1.65;font-size:13px;max-width:480px;margin-bottom:25px}
+.quote-benefits{max-width:470px}.quote-benefits h3{font-size:19px}.quote-benefits p{font-size:10px;line-height:1.5;color:#625e58;margin:9px 0 0;max-width:125px}.quote-benefits svg{width:27px;height:27px;padding:9px;margin-bottom:10px}
+.quote-landscape{bottom:0;left:0;right:auto;width:79%;height:445px;z-index:0;mask-image:linear-gradient(180deg,transparent,#000 39%,#000 78%,transparent 100%),linear-gradient(90deg,#000 55%,transparent 100%);mask-composite:intersect}
+.quote-landscape img{object-position:100% 62%;filter:saturate(.65) sepia(.17) contrast(1.06)}
+.quote-signature{bottom:26px;right:-10px;font-size:30px;text-shadow:0 1px 6px #f5f3ef,0 0 18px #f5f3ef}
+#armatuviaje .trip-form{align-self:start;margin-top:24px;padding:30px;border-radius:22px;box-shadow:0 20px 55px #4c403321;background:#fcfaf6f5;gap:15px 14px}
+.quote-form-heading h3{font-size:25px}.quote-form-heading{gap:12px;margin-bottom:7px}.quote-form-heading>svg{width:22px;height:22px;padding:11px}
+#armatuviaje .trip-form .btn{background:#cf0921;transition:background .2s}#armatuviaje .trip-form .btn:hover{background:#ac091c}
+.quote-topography{opacity:.32}.quote-wave{position:absolute;width:100%;left:0;pointer-events:none;z-index:2;display:block}.quote-wave-top{top:-1px;height:100px}.quote-wave-bottom{bottom:-1px;height:90px}
+@media(min-width:1025px) and (max-width:1300px){.quote-layout{width:84%;gap:55px}.quote-benefits li{padding:0 12px}.quote-benefits h3{font-size:18px}}
+@media(max-width:1024px){#armatuviaje.quote-editorial{padding:90px 0 90px}.quote-layout{width:84%;max-width:680px;grid-template-columns:1fr;gap:25px}.quote-story{min-height:0;padding-bottom:230px}.quote-landscape{top:410px;bottom:auto;width:100%;height:300px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}.quote-signature{bottom:65px;right:2%}.quote-benefits{max-width:100%}#armatuviaje .trip-form{margin:0;grid-template-columns:1fr 1fr;padding:30px}.quote-wave-top{height:65px}.quote-wave-bottom{height:60px}#armatuviaje .trip-form label.full,#armatuviaje .trip-form .btn{grid-column:1/-1}}
+@media(max-width:600px){#armatuviaje.quote-editorial{padding:80px 0 75px}.quote-layout{width:88%;gap:5px}.quote-story{padding-bottom:230px}#armatuviaje h2{font-size:clamp(46px,13vw,66px)}.quote-benefits li{padding:0 9px}.quote-benefits h3{font-size:17px}.quote-benefits p{font-size:10px}.quote-benefits svg{width:24px;height:24px;padding:8px}.quote-landscape{top:445px;height:300px;width:100%}.quote-signature{bottom:65px;right:0;font-size:27px;background:radial-gradient(ellipse,#f5f2eabb,transparent 72%)}#armatuviaje .trip-form{grid-template-columns:1fr;padding:24px 20px}.quote-form-heading h3{font-size:25px}#armatuviaje .trip-form input,#armatuviaje .trip-form select,#armatuviaje .trip-form textarea{font-size:16px}.quote-wave-top{height:55px}.quote-wave-bottom{height:45px}}
+
+#armatuviaje.quote-editorial{padding-top:105px;padding-bottom:105px}
+.quote-topography{opacity:.17}
+.quote-landscape{height:380px}.quote-landscape img{position:absolute;bottom:0;height:155%;object-position:right bottom}
+.quote-mobile-landscape{display:none}
+@media(max-width:1024px){#armatuviaje.quote-editorial{padding-top:90px;padding-bottom:80px}.quote-landscape{display:none}.quote-mobile-landscape{display:block;position:absolute;bottom:-15px;left:-10vw;right:-10vw;height:250px;margin:0;z-index:-1;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 72%,transparent)}.quote-mobile-landscape img{position:absolute;bottom:0;width:100%;height:155%;object-fit:cover;object-position:right bottom;filter:saturate(.65) sepia(.17)}.quote-story{isolation:isolate}.quote-signature{bottom:100px}.quote-topography{opacity:.13}}
+
+@media(min-width:1025px){.quote-landscape{width:60%;mask-image:linear-gradient(180deg,transparent,#000 38%,#000 78%,transparent),linear-gradient(90deg,#000 75%,transparent)}.quote-signature{bottom:45px;background:radial-gradient(ellipse,#f5f2eae6,transparent 72%);padding:12px 18px;right:-15px}}
