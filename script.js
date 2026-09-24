@@ -37,14 +37,30 @@ if (list) {
   `).join("");
 }
 
-// Menú móvil.
+// Menú móvil: el mismo control de apertura, con estado accesible sincronizado.
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
-toggle?.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  toggle.setAttribute("aria-expanded", open);
-});
-document.querySelectorAll(".main-nav a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+if (toggle && nav) {
+  const setMenuOpen = open => {
+    nav.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  };
+  toggle.addEventListener("click", () => setMenuOpen(!nav.classList.contains("open")));
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenuOpen(false)));
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      setMenuOpen(false);
+      toggle.focus();
+    }
+  });
+  document.addEventListener("click", event => {
+    if (nav.classList.contains("open") && !event.target.closest(".site-header")) setMenuOpen(false);
+  });
+  matchMedia(document.querySelector('.navbar-editorial') ? '(min-width:1101px)' : '(min-width:901px)').addEventListener('change', event => {
+    if (event.matches) setMenuOpen(false);
+  });
+}
 
 // Aparición suave de secciones.
 const observer = new IntersectionObserver(entries => {

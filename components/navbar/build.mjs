@@ -1,0 +1,17 @@
+import { build } from '../coverage/node_modules/esbuild/lib/main.js';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import React from '../coverage/node_modules/react/index.js';
+import { renderToStaticMarkup } from '../coverage/node_modules/react-dom/server.node.js';
+const directory = fileURLToPath(new URL('.', import.meta.url));
+await build({absWorkingDir:directory,entryPoints:['Navbar.jsx'],bundle:true,platform:'node',format:'esm',packages:'external',external:['../coverage/node_modules/react/index.js'],outfile:'.navbar-build.mjs'});
+const { default: Navbar } = await import('./.navbar-build.mjs?' + Date.now());
+const page = new URL('../../index.html', import.meta.url);
+let html = readFileSync(page,'utf8');
+if (!/<header class="site-header[\s\S]*?<\/header>/.test(html)) throw new Error('Navbar not found');
+html = html.replace(/<header class="site-header[\s\S]*?<\/header>/, renderToStaticMarkup(React.createElement(Navbar)));
+if (!html.includes('href="navbar.css')) html = html.replace('</head>', '<link rel="stylesheet" href="navbar.css?v=1">\n</head>');
+if (!html.includes('src="navbar.js')) html = html.replace('</body>', '<script src="navbar.js?v=1"></script>\n</body>');
+html = html.replace('script.js?v=portada-costanera-9','script.js?v=navbar-editorial-1');
+writeFileSync(page,html);
+console.log('Navbar React integrada sin modificar las secciones.');
