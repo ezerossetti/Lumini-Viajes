@@ -11,9 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Caveat:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=portada-costanera-9">
+  <link rel="stylesheet" href="style.css?v=navbar-12">
   <link rel="stylesheet" href="about.css?v=5">
   <link rel="stylesheet" href="transfers.css?v=4">
+  <link rel="stylesheet" href="excursions.css?v=2">
+  <link rel="stylesheet" href="services.css?v=2">
+  <link rel="stylesheet" href="experiences.css?v=2">
   <link rel="icon" href="assets/favicon.svg?v=lumini-icon-3" type="image/svg+xml">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:title" content="Lumini Viajes | Traslados y viajes desde Villa Carlos Paz y Córdoba">
@@ -41,11 +44,12 @@
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="main-nav">
       <a href="#inicio">Inicio</a>
+      <a href="#eventos">Eventos</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#traslados">Traslados</a>
       <a href="#excursiones">Excursiones</a>
       <a href="#servicios">Servicios</a>
-      <a href="#eventos">Eventos</a>
+      <a href="#experiencias">Experiencias</a>
       <a href="#armatuviaje">Armá tu viaje</a>
       <a href="#contacto">Contacto</a>
       <a class="nav-cta" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">WhatsApp ↗</a>
@@ -145,6 +149,8 @@
     </section>
 
     <section class="section excursions" id="excursiones">
+<svg class="excursions-route" viewBox="0 0 1000 260" fill="none" aria-hidden="true"><g stroke="#81817b" stroke-width="1" opacity=".17"><path d="M0 15C90 95 130-30 220 50S300 155 390 165 410 240 465 260M850 0C790 40 860 50 780 90S750 145 725 180 740 225 700 260"/><path d="M260 260C295 160 330 160 390 130S440 65 500 70 515-30 580 20 625 5 650 50 570 115 650 155 720 235 810 200" stroke-dasharray="5 6"/></g><g fill="#eeeae3" stroke="#c32230" stroke-width="2" opacity=".17"><circle cx="294" cy="204" r="4"/><circle cx="465" cy="81" r="4"/><circle cx="805" cy="202" r="4"/></g><text x="600" y="180" text-anchor="middle" fill="#787878" opacity=".28" font-size="10" letter-spacing="3">CÓRDOBA</text></svg>
+<div class="excursions-inner">
       <div class="section-tag">03 · EXCURSIONES</div>
       <div class="section-heading">
         <div><p class="eyebrow dark">DESTINOS</p><h2>Descubrí<br><em>Córdoba.</em></h2></div>
@@ -155,85 +161,68 @@
         <img class="destination-photo" src="assets/images/destinos/la-cumbrecita.jpg" alt="Río y casas serranas en La Cumbrecita" width="1280" height="1700" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>01</span><h3>La Cumbrecita<br>+ Villa General Belgrano</h3><p>Sierras, pueblos y paisajes.</p><a class="destination-link" href="seo/viajes-a-la-cumbrecita/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>01</span><h3>La Cumbrecita<br>+ Villa General Belgrano</h3><p>Sierras, pueblos y paisajes.</p><a class="destination-link" href="seo/viajes-a-la-cumbrecita/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
         <article class="destination reveal destination-interactive" data-destination="viajes-a-villa-general-belgrano">
         <img class="destination-photo" src="assets/images/destinos/villa-general-belgrano.jpg" alt="Calle principal de Villa General Belgrano" width="1280" height="964" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>02</span><h3>Villa General<br>Belgrano</h3><p>Una escapada entre sierras.</p><a class="destination-link" href="seo/viajes-a-villa-general-belgrano/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>02</span><h3>Villa General<br>Belgrano</h3><p>Una escapada entre sierras.</p><a class="destination-link" href="seo/viajes-a-villa-general-belgrano/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
         <article class="destination reveal destination-interactive" data-destination="excursiones-villa-carlos-paz">
         <img class="destination-photo" src="assets/images/destinos/villa-carlos-paz.jpg" alt="Villa Carlos Paz y el lago San Roque desde el Cerro de la Cruz" width="1280" height="960" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>03</span><h3>City Tour<br>Villa Carlos Paz</h3><p>Reloj Cucú · Costanera · Dique San Roque.</p><a class="destination-link" href="seo/excursiones-villa-carlos-paz/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>03</span><h3>City Tour<br>Villa Carlos Paz</h3><p>Reloj Cucú · Costanera · Dique San Roque.</p><a class="destination-link" href="seo/excursiones-villa-carlos-paz/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
         <article class="destination reveal destination-interactive" data-destination="viajes-a-mina-clavero">
         <img class="destination-photo" src="assets/images/destinos/mina-clavero.jpg" alt="Río y rocas del Nido del Águila en Mina Clavero" width="1280" height="933" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>04</span><h3>Mina Clavero<br>+ Cura Brochero</h3><p>Altas Cumbres y Valle de Traslasierra.</p><a class="destination-link" href="seo/viajes-a-mina-clavero/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>04</span><h3>Mina Clavero<br>+ Cura Brochero</h3><p>Altas Cumbres y Valle de Traslasierra.</p><a class="destination-link" href="seo/viajes-a-mina-clavero/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
         <article class="destination reveal destination-interactive" data-destination="excursiones-cordoba">
         <img class="destination-photo" src="assets/images/destinos/cabalango.jpg" alt="Balneario y río de Cabalango" width="1024" height="768" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>05</span><h3>Balneario Cabalango<br>+ Tanti</h3><p>Ríos, sierras y naturaleza.</p><a class="destination-link" href="seo/excursiones-cordoba/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>05</span><h3>Balneario Cabalango<br>+ Tanti</h3><p>Ríos, sierras y naturaleza.</p><a class="destination-link" href="seo/excursiones-cordoba/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
         <article class="destination reveal destination-interactive" data-destination="viajes-a-capilla-del-monte">
         <img class="destination-photo" src="assets/images/destinos/capilla-del-monte.jpg" alt="Entrada a Capilla del Monte con las sierras al fondo" width="1280" height="960" loading="lazy" decoding="async">
         <video class="destination-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="destination-shade"></div>
-        <div class="destination-content"><span>06</span><h3>Capilla del Monte<br>+ Los Cocos</h3><p>Cosquín · Los Cocos · Capilla del Monte.</p><a class="destination-link" href="seo/viajes-a-capilla-del-monte/index.html">Ver destino <b>↗</b></a></div>
+        <div class="destination-content"><span>06</span><h3>Capilla del Monte<br>+ Los Cocos</h3><p>Cosquín · Los Cocos · Capilla del Monte.</p><a class="destination-link" href="seo/viajes-a-capilla-del-monte/index.html">Ver destino <b aria-hidden="true">→</b></a></div>
       </article>
       </div>
 <p class="photo-credits"><a href="creditos-imagenes.html">Créditos de fotografías</a></p>
-<div class="center-action"><a class="text-link" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20una%20excursi%C3%B3n." target="_blank" rel="noopener">Consultar una excursión <span>↗</span></a></div>
+<div class="center-action"><a class="text-link" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20una%20excursi%C3%B3n." target="_blank" rel="noopener">Consultar una excursión <span aria-hidden="true">→</span></a></div>
+<p class="excursions-signoff">CREAMOS GRANDES HISTORIAS<br>A TRAVÉS DE LOS VIAJES.</p>
+</div>
+<svg class="excursions-bottom-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C170 7 280 68 455 48S705 28 860 49 1140 72 1440 24L1440 80H0Z"/><path d="M0 48C170 7 280 68 455 48" fill="none" stroke="#a91924" stroke-width=".8" opacity=".65" vector-effect="non-scaling-stroke"/></svg>
     </section>
 
-    <section class="section fleet dark-section" id="servicios">
-      <div class="section-tag light">04 · SERVICIOS</div>
-      <div class="fleet-grid">
-        <div class="fleet-copy">
-          <p class="eyebrow">ALQUILER DE VEHÍCULOS CON CHOFER</p>
-          <h2>Una flota preparada<br>para <em>tu viaje.</em></h2>
-          <p>Contamos con una moderna flota de transporte destinada exclusivamente a nuestros servicios.</p>
-          <div class="vehicle-list">
-            <div><b>01</b><span><strong>Vehículos especiales</strong>Según las características de tu grupo.</span></div>
-            <div><b>02</b><span><strong>Un traslado a tu medida</strong>Vehículos adaptados a la necesidad de tu traslado.</span></div>
-            <div><b>03</b><span><strong>Coordinación personalizada</strong>Organizamos horarios, recorrido y cantidad de pasajeros.</span></div>
-          </div>
-          <p class="small-note">Conductores experimentados y documentación habilitante correspondiente. Presupuestos personalizados para viajes especiales.</p>
-        </div>
-        <div class="fleet-image">
-          <div class="media-placeholder">Colocar foto o video</div>
-          <span>TRANSPORTE · TURISMO · EXPERIENCIAS</span>
-        </div>
-      </div>
+    <section class="section fleet dark-section services-editorial" id="servicios" aria-labelledby="services-title">
+<svg class="services-contour" viewBox="0 0 1440 700" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M30 0C400-50 280 180 550 200S780 430 1050 330 1280 350 1440 540" stroke="#aaa"/><path d="M0 35C190-30 270 120 450 145S720 440 920 480 1260 530 1440 610" stroke="#8f9394"/><path d="M0 635C260 535 330 675 540 600S930 490 1440 600" stroke="#a91924"/></svg>
+<div class="services-inner">
+<div class="services-copy"><div class="section-tag light">04 · SERVICIOS</div><p class="eyebrow">ALQUILER DE VEHÍCULOS CON CHOFER</p><h2 id="services-title">Una flota<br>preparada<br>para <em>tu viaje.</em></h2><p class="services-description">Contamos con una moderna flota de transporte destinada exclusivamente a nuestros servicios. Conductores experimentados y documentación habilitante correspondiente. Presupuestos personalizados para viajes especiales.</p></div>
+<figure class="services-photo"><img src="assets/images/lumini-sprinter.jpg" alt="Sprinter blanca de Lumini Viajes, vista de frente y de costado" width="720" height="1280" loading="lazy" decoding="async"><span class="services-photo-label">TRANSPORTE · TURISMO · EXPERIENCIAS</span><p class="services-photo-note">Más que un traslado,<br>parte de tu experiencia.</p><a class="services-photo-link" href="assets/images/lumini-sprinter.jpg" target="_blank" rel="noopener" aria-label="Ver nuestra flota: abrir fotografía completa"><span aria-hidden="true">↗</span><span>VER NUESTRA FLOTA</span></a><div class="services-photo-index" aria-hidden="true"><span><b>01</b><i></i>03</span><span class="services-photo-arrows"><i>←</i><i>→</i></span></div></figure>
+<ul class="services-features"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="17" rx="3"/><path d="M5 12h14M8 7h8M8 16h1m6 0h1M7 20v2m10-2v2"/></svg><span class="feature-number">01</span><h3>Vehículos especiales</h3><p>Según las características de tu grupo.</p></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span class="feature-number">02</span><h3>Un traslado a tu medida</h3><p>Vehículos adaptados a la necesidad de tu traslado.</p></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-13 4h2m3 0h2m-7 3h2"/></svg><span class="feature-number">03</span><h3>Coordinación personalizada</h3><p>Organizamos horarios, recorrido y cantidad de pasajeros.</p></li></ul>
+</div>
+<svg class="services-bottom-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C180 13 250 17 410 47S620 56 760 35 1030 80 1160 66 1350 41 1440 25L1440 100H0Z"/><path d="M0 60C180 13 250 17 410 47S620 56 760 35" fill="none" stroke="#a91924" stroke-width=".7" opacity=".65"/></svg>
     </section>
 
     <section class="section event-carousel-section experiences-editorial" id="experiencias" aria-labelledby="carousel-title">
 <div class="section-tag">05 · EXPERIENCIAS</div><div class="section-heading"><div><p class="eyebrow dark">VIAJAMOS CON VOS</p><h2 id="carousel-title">Que el evento<br>empiece <em>en el viaje.</em></h2></div><p>Festivales, música, deportes y celebraciones. Elegí tu experiencia y nosotros coordinamos el traslado.</p></div>
 <div class="experience-signature" aria-hidden="true">Más experiencias,<br>menos límites.<span>↗</span></div>
-<div class="event-carousel" role="region" aria-roledescription="carrusel" aria-label="Traslados a eventos">
-<div class="event-slides"><article class="event-slide" id="event-slide-0" aria-label="1 de 4" ><div class="event-slide-text"><span class="event-slide-number">01 / 04</span><p class="eyebrow">EVENTOS Y TRASLADOS ESPECIALES</p><h3>Festivales<br>y música</h3><p class="event-slide-copy">Cosquín Rock, Folklore de Cosquín, Jesús María, Oktoberfest y recitales. Coordinamos el traslado para que disfrutes desde el primer momento.</p><a class="btn btn-red" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20festivales%20y%20m%C3%BAsica." target="_blank" rel="noopener">Consultar traslado ↗</a><ul class="experience-benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6M5 10H3v9h18v-9h-2M6 19v3m12-3v3M6 14h12"/></svg><span>Comodidad<br>en el viaje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span>Viajes para<br>cada grupo</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h2m4 0h2m-8 3h2"/></svg><span>Coordinación<br>de horarios</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 3 7v5c0 6 9 10 9 10s9-4 9-10V7zM8 12l3 3 5-6"/></svg><span>Atención<br>personalizada</span></li></ul></div><figure class="event-slide-media"><div class="media-placeholder">Colocar foto o video</div></figure></article><article class="event-slide" id="event-slide-1" aria-label="2 de 4" hidden><div class="event-slide-text"><span class="event-slide-number">02 / 04</span><p class="eyebrow">EVENTOS Y TRASLADOS ESPECIALES</p><h3>Música<br>electrónica</h3><p class="event-slide-copy">Fiestas, festivales y eventos de música electrónica. Contanos a dónde vas, con quiénes viajás y qué horarios necesitás.</p><a class="btn btn-red" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20m%C3%BAsica%20electr%C3%B3nica." target="_blank" rel="noopener">Consultar traslado ↗</a><ul class="experience-benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6M5 10H3v9h18v-9h-2M6 19v3m12-3v3M6 14h12"/></svg><span>Comodidad<br>en el viaje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span>Viajes para<br>cada grupo</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h2m4 0h2m-8 3h2"/></svg><span>Coordinación<br>de horarios</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 3 7v5c0 6 9 10 9 10s9-4 9-10V7zM8 12l3 3 5-6"/></svg><span>Atención<br>personalizada</span></li></ul></div><figure class="event-slide-media"><div class="media-placeholder">Colocar foto o video</div></figure></article><article class="event-slide" id="event-slide-2" aria-label="3 de 4" hidden><div class="event-slide-text"><span class="event-slide-number">03 / 04</span><p class="eyebrow">EVENTOS Y TRASLADOS ESPECIALES</p><h3>Eventos<br>deportivos</h3><p class="event-slide-copy">Partidos, torneos, competencias y carreras. Organizamos el viaje según el grupo, el destino y los horarios del evento.</p><a class="btn btn-red" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20eventos%20deportivos." target="_blank" rel="noopener">Consultar traslado ↗</a><ul class="experience-benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6M5 10H3v9h18v-9h-2M6 19v3m12-3v3M6 14h12"/></svg><span>Comodidad<br>en el viaje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span>Viajes para<br>cada grupo</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h2m4 0h2m-8 3h2"/></svg><span>Coordinación<br>de horarios</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 3 7v5c0 6 9 10 9 10s9-4 9-10V7zM8 12l3 3 5-6"/></svg><span>Atención<br>personalizada</span></li></ul></div><figure class="event-slide-media"><div class="media-placeholder">Colocar foto o video</div></figure></article><article class="event-slide" id="event-slide-3" aria-label="4 de 4" hidden><div class="event-slide-text"><span class="event-slide-number">04 / 04</span><p class="eyebrow">EVENTOS Y TRASLADOS ESPECIALES</p><h3>Culturales<br>y especiales</h3><p class="event-slide-copy">Fiestas populares, eventos estudiantiles, encuentros corporativos y celebraciones. Armamos una propuesta para tu grupo.</p><a class="btn btn-red" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20culturales%20y%20especiales." target="_blank" rel="noopener">Consultar traslado ↗</a><ul class="experience-benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6M5 10H3v9h18v-9h-2M6 19v3m12-3v3M6 14h12"/></svg><span>Comodidad<br>en el viaje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span>Viajes para<br>cada grupo</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h2m4 0h2m-8 3h2"/></svg><span>Coordinación<br>de horarios</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 3 7v5c0 6 9 10 9 10s9-4 9-10V7zM8 12l3 3 5-6"/></svg><span>Atención<br>personalizada</span></li></ul></div><figure class="event-slide-media"><div class="media-placeholder">Colocar foto o video</div></figure></article></div><div class="event-carousel-controls"><div class="event-slide-dots"><button type="button" aria-label="Mostrar Festivales y música" aria-controls="event-slide-0" aria-pressed="true" data-slide="0"><span></span></button><button type="button" aria-label="Mostrar Música electrónica" aria-controls="event-slide-1" aria-pressed="false" data-slide="1"><span></span></button><button type="button" aria-label="Mostrar Eventos deportivos" aria-controls="event-slide-2" aria-pressed="false" data-slide="2"><span></span></button><button type="button" aria-label="Mostrar Culturales y especiales" aria-controls="event-slide-3" aria-pressed="false" data-slide="3"><span></span></button></div><div class="event-carousel-actions"><button type="button" class="carousel-pause">Pausar</button><button type="button" class="carousel-prev" aria-label="Experiencia anterior">←</button><button type="button" class="carousel-next" aria-label="Experiencia siguiente">→</button></div></div>
-</div></section>
-
-    <section class="section map-section" id="cobertura">
-      <div class="section-tag">06 · COBERTURA</div>
-      <div class="map-grid">
-        <div><p class="eyebrow dark">NOS MOVEMOS POR CÓRDOBA</p><h2>El destino<br><em>empieza acá.</em></h2><p>Villa Carlos Paz es nuestro punto de partida. Desde ahí conectamos destinos, eventos, instituciones y grupos con soluciones de transporte a medida.</p><div class="map-legend"><span><i class="legend-line"></i> RECORRIDOS DESDE VILLA CARLOS PAZ</span></div></div>
-        <div class="cordoba-map" aria-label="Mapa de la Provincia de Córdoba con destinos de Lumini">
-          <div class="map-art">
-            <div id="lumini-map" role="img" aria-label="Mapa interactivo de Córdoba con rutas y destinos de Lumini Viajes"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="photo-carousel" role="region" aria-roledescription="carrusel" aria-label="Traslados a eventos">
+<div class="photo-carousel-panel"><article class="experience-stage" aria-label="1 de 4">
+<p class="stage-number"><b>01</b><span>/ 04</span></p><p class="eyebrow">EVENTOS Y TRASLADOS ESPECIALES</p>
+<h3></h3><p class="stage-description"></p><img class="experience-stage-photo" alt="" decoding="async"><a class="btn btn-red stage-cta" target="_blank" rel="noopener">CONSULTAR TRASLADO ↗</a><ul class="experience-benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6M5 10H3v9h18v-9h-2M6 19v3m12-3v3M6 14h12"/></svg><span>Comodidad<br>en el viaje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 4a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5v2"/></svg><span>Viajes para<br>cada grupo</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h2m4 0h2m-8 3h2"/></svg><span>Coordinación<br>de horarios</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 3 7v5c0 6 9 10 9 10s9-4 9-10V7zM8 12l3 3 5-6"/></svg><span>Atención<br>personalizada</span></li></ul></article><div class="experience-thumbnails" aria-label="Elegir experiencia"></div></div>
+<div class="experience-navigation"><button class="experience-prev" type="button" aria-label="Experiencia anterior">←</button><button class="experience-next" type="button" aria-label="Experiencia siguiente">→</button></div>
+<div class="experience-footer"><div class="experience-dots" aria-label="Diapositivas"></div><button class="experience-pause" type="button">Pausar</button></div></div></section>
 
     <section class="section build-trip" id="armatuviaje">
-      <div class="section-tag">07 · COTIZACIÓN</div>
+      <div class="section-tag">06 · COTIZACIÓN</div>
       <div class="trip-grid">
         <div><p class="eyebrow dark">ARMÁ TU VIAJE</p><h2>Decinos qué<br><em>necesitás.</em></h2><p>Elegí el tipo de servicio, contanos origen, destino y cantidad de pasajeros. El botón final prepara automáticamente tu consulta para WhatsApp.</p></div>
         <form id="trip-form" class="trip-form">
@@ -249,7 +238,7 @@
     </section>
 
     <section class="section faq-section" id="preguntas-frecuentes" aria-labelledby="faq-title">
-      <div class="section-tag">08 · PREGUNTAS FRECUENTES</div>
+      <div class="section-tag">07 · PREGUNTAS FRECUENTES</div>
       <div class="faq-layout"><div><p class="eyebrow dark">ANTES DE VIAJAR</p><h2 id="faq-title">Resolvemos<br><em>tus dudas.</em></h2><p>Lo que necesitás saber para empezar a organizar tu próximo viaje.</p><a class="text-link" href="https://wa.me/5493541272605" target="_blank" rel="noopener">Hacer otra consulta ↗</a></div><div class="faq-list"><details><summary>¿Cómo pido un presupuesto?</summary><p>Escribinos por WhatsApp o completá el formulario Armá tu viaje con origen, destino, fecha y cantidad de pasajeros. Con esos datos podemos preparar una propuesta.</p></details><details><summary>¿Qué vehículo necesito para mi grupo?</summary><p>Coordinamos el vehículo según la cantidad de pasajeros y las necesidades del traslado. Contanos también cuánto equipaje llevan y cualquier necesidad particular.</p></details><details><summary>¿Puedo consultar por un traslado de ida y vuelta?</summary><p>Sí. Indicá los puntos de encuentro y los horarios de ambos tramos para que podamos cotizar el servicio.</p></details><details><summary>¿Hacen traslados para eventos y salidas educativas?</summary><p>Podés consultar por festivales, recitales, eventos deportivos y viajes educativos. Coordinamos la propuesta según el grupo, el destino y los horarios.</p></details><details><summary>¿Cómo confirmo la reserva?</summary><p>Contactanos para confirmar disponibilidad, presupuesto y condiciones. Enviar una consulta desde la web no confirma una reserva.</p></details><details><summary>¿Qué incluye cada excursión?</summary><p>El recorrido y los servicios incluidos dependen de la propuesta. Antes de confirmar, consultanos por horarios, paradas, entradas y comidas.</p></details></div></div>
     </section>
 
@@ -284,5 +273,6 @@
   <a class="floating-wa" href="https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="29" height="29" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.04 0C5.44 0 .07 5.37.06 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.98 11.98 0 0 0 5.83 1.49h.01c6.6 0 11.97-5.37 11.97-11.97a11.9 11.9 0 0 0-3.49-8.41ZM12.04 21.84a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.68.96.98-3.58-.23-.37a9.92 9.92 0 0 1-1.52-5.28C2.16 6.48 6.56 2.08 12.05 2.08a9.86 9.86 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.48-4.46 9.83-9.93 9.83Zm5.45-7.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.3 1.27.48 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg></a>
   <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.umd.min.js"></script>
   <script src="script.js?v=portada-costanera-9"></script>
+<script src="experiences.js?v=2"></script>
 </body>
 </html>

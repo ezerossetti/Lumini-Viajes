@@ -297,3 +297,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 /* Portada elegida por Lumini. */
 .hero-bg.hero-cover{background:none;top:82px;overflow:hidden}.hero-cover img{width:100%;height:100%;object-fit:cover;object-position:70% center}.hero:has(.hero-cover) .hero-overlay{background:linear-gradient(90deg,#060708c9 0%,#06070880 36%,#06070815 68%,transparent),linear-gradient(0deg,#060708b3,transparent 25%)}
 @media(max-width:760px){.hero-bg.hero-cover{top:72px}.hero-cover img{object-position:66% center}.hero:has(.hero-cover) .hero-overlay{background:linear-gradient(90deg,#060708b8,#06070860),linear-gradient(0deg,#060708a6,transparent 35%)}}
+
+/* Continuidad de la portada con Próximos Eventos. */
+#inicio.hero{background-color:#0f1213;border-bottom:0;box-shadow:none}
+#inicio.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:30%;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(15,18,19,0) 0%,rgba(15,18,19,.35) 35%,rgba(15,18,19,.75) 70%,#0f1213 100%)}
+#inicio .hero-bottom .scroll-line{display:none}
+#eventos.upcoming-events{background:#0f1213;border-top:0;box-shadow:none}
+/* Experiencias: encabezado compacto e imagen integrada con la transición. */
+#experiencias.experiences-editorial{padding-top:64px;padding-bottom:58px;background:linear-gradient(180deg,#e9e6e0 0,#f1eee8 110px)}
+#experiencias .section-tag{top:16px}
+#experiencias .section-heading{margin-bottom:20px;max-width:62%}
+#experiencias .section-heading h2{margin-bottom:14px}
+#experiencias .section-heading>p{line-height:1.65}
+#experiencias.experiences-editorial::before{width:52%;height:340px;opacity:.38;filter:grayscale(.8) contrast(1.12);background-position:center 58%;mask-image:linear-gradient(90deg,transparent,#000 38%),linear-gradient(180deg,transparent 0%,#000 18%,#000 65%,transparent 100%);mask-composite:intersect}
+#experiencias .experience-signature{top:83px;right:9%;font-size:30px;color:#353432}
+#experiencias .event-carousel{position:relative;z-index:1}
+#experiencias .event-slides{box-shadow:0 16px 30px #1e181b24}
+#servicios .services-bottom-wave{fill:#e9e6e0}
+@media(min-width:761px) and (max-width:1100px){#experiencias .experience-signature{top:85px;right:6%;font-size:25px}#experiencias .section-heading{max-width:64%}}
+@media(max-width:760px){#experiencias.experiences-editorial{padding-top:58px;padding-bottom:42px}#experiencias .section-tag{top:17px}#experiencias .section-heading{max-width:100%;margin-bottom:22px}#experiencias.experiences-editorial::before{width:80%;height:280px;opacity:.23}#experiencias .experience-signature{display:none}}
+#experiencias.experiences-editorial{scroll-margin-top:82px}
+@media(max-width:760px){#experiencias.experiences-editorial{scroll-margin-top:72px}}
+
+@media(min-width:901px){.main-nav{gap:clamp(12px,1.4vw,23px);font-size:11px;letter-spacing:.7px}}
+@media(min-width:901px) and (max-width:1100px){.site-header{padding-left:3vw;padding-right:3vw}.main-nav{gap:10px;font-size:9px}.main-nav .nav-cta{padding:12px}.site-header .brand{min-width:135px}.site-header .lumini-logo{width:135px}}
