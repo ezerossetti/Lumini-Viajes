@@ -14,7 +14,7 @@ No se promete disponibilidad. Las fechas son del evento, no de salidas confirmad
 La consulta del formulario no confirma una reserva. El equipo confirma disponibilidad, presupuesto y condiciones directamente.
 
 ## Rendimiento y comprobaciones
-18 imágenes convertidas a WebP y limitadas a 1920 px, manteniendo encuadre y originales. Peso combinado: 19.105.358 → 3.628.794 bytes (81% menos). No es una medición de tiempo de carga. Detalle: image-optimization-report.json.
+18 imágenes convertidas a WebP y limitadas a 1920 px, manteniendo el encuadre. Los originales duplicados sin referencias fueron retirados después, durante la limpieza. Peso combinado: 19.105.358 → 3.628.794 bytes (81% menos). No es una medición de tiempo de carga. El informe temporal de optimización se retiró durante la limpieza.
 Se retiraron MapTiler JS/CSS y su integración inactiva, porque Cobertura ya fue eliminada. Sin librerías nuevas.
 Enlaces y assets locales: sin destinos faltantes. JavaScript: comprobación de sintaxis aprobada.
 Probados menú móvil, selección de experiencias, acordeón y validación del formulario. Mensaje WhatsApp probado con navegador simulado, sin enviar mensajes. Revisados anchos 320, 390, 768 y 1440 px.
