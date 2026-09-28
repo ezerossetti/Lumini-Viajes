@@ -72,7 +72,7 @@ tripForm?.addEventListener("submit", event => {
     data.get("date") ? `Fecha: ${data.get("date")}` : "",
     data.get("note") ? `Detalles: ${data.get("note")}` : ""
   ].filter(Boolean).join("\n");
-  window.open(waBase + encodeURIComponent(message), "_blank", "noopener");
+  window.reviewQuote(message);
 });
 
 // Fecha mínima del formulario: hoy.

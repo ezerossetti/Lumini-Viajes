@@ -50,7 +50,7 @@ const experiences = [
   current=(index+experiences.length)%experiences.length;const item=experiences[current];
   stage.setAttribute('aria-label',`${current+1} de ${experiences.length}: ${item.label}`);
   stage.querySelector('.stage-number b').textContent=String(current+1).padStart(2,'0');stage.querySelector('h3').innerHTML=item.title;
-  stage.querySelector('.stage-description').textContent=item.description;stage.querySelector('a').href=item.link;image.src=item.image;image.alt=item.alt;
+  stage.querySelector('.stage-description').textContent=item.description;stage.querySelector('a').href="#armatuviaje";stage.querySelector('a').removeAttribute("target");stage.querySelector('a').dataset.quoteService="Evento";stage.querySelector('a').dataset.quoteEvent=item.label;image.src=item.image;image.alt=item.alt;
   thumbs.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===current)));dots.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===current)));
   stage.classList.remove('is-changing');if(animate&&!motion.matches){void stage.offsetWidth;stage.classList.add('is-changing');}
  }

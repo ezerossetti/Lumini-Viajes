@@ -22,5 +22,5 @@ Navbar y Cotización tienen fuentes en `components/navbar` y `components/quote`.
 
 ## Mantenimiento
 
-Las fechas y fuentes de eventos están en `script.js`. Revisarlas antes de cada temporada. Una consulta no confirma una reserva.
+Las fechas y fuentes de eventos están en `script.js`. Ver `PUBLICACION.md` para publicar en Vercel. Revisarlas antes de cada temporada. Una consulta no confirma una reserva.
 Las imágenes en uso están optimizadas en WebP; se quitaron duplicados sin referencias. El historial de Git conserva las versiones anteriores. Los videos originales se mantienen para uso futuro.
