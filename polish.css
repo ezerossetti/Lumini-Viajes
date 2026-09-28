@@ -1,0 +1,39 @@
+/* Contact: final editorial panel, matching the existing dark palette. */
+#contacto.contact-editorial{background:#101113;color:#fff;padding:72px 6vw 80px;min-height:0;overflow:hidden}
+.contact-editorial .contact-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(40px,6vw,110px);max-width:1440px;margin:auto}
+.contact-editorial .contact-inner{position:relative;max-width:none;z-index:1}
+.contact-editorial .eyebrow{color:#a9a9ab;font-size:10px;letter-spacing:2.8px;margin-bottom:34px}.contact-editorial .eyebrow span{color:#d32631;margin-left:20px}
+#contacto.contact-editorial h2{font-size:clamp(76px,7.2vw,112px);line-height:.92;margin-bottom:25px}
+.contact-editorial .contact-copy{color:#bcbec0;font-size:16px;line-height:1.7;max-width:430px}
+.contact-editorial .contact-buttons{display:flex;align-items:flex-start;flex-direction:column;gap:20px;margin:27px 0 32px}
+.contact-editorial .contact-phone{font-size:13px;padding:6px 0;border-bottom:1px solid #ffffff30}
+.contact-editorial .contact-data{display:grid;gap:22px;padding-top:24px;border-top:1px solid #ffffff20;font-size:13px;line-height:1.6;color:#d6d6d7;letter-spacing:0;text-transform:none}
+.contact-editorial .contact-data small{display:block;color:#8f9398;font-size:9px;letter-spacing:1.8px;margin-bottom:5px}
+.contact-editorial .contact-data a{overflow-wrap:anywhere}.contact-socials{display:flex;gap:28px;margin-top:22px;font-size:12px}.contact-socials a{min-height:44px;display:flex;align-items:center}
+.contact-editorial a:focus-visible{outline:2px solid #e84452;outline-offset:5px}.contact-socials a:hover,.contact-phone:hover{color:#ef646c}
+.contact-visual{position:relative;margin:0;min-width:0;height:550px;border-radius:110px 12px 12px 12px;overflow:hidden;border:1px solid #ffffff18}
+.contact-visual img{width:100%;height:100%;object-fit:cover;object-position:46% center}
+.contact-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#10111335,transparent 40%,#101113b0);pointer-events:none}
+.contact-signature{position:absolute;z-index:1;top:30px;right:30px;font:400 39px/1.05 Caveat,cursive;transform:rotate(-6deg);text-align:right;color:#fff7e9;text-shadow:0 2px 15px #0007}
+.contact-visual figcaption{position:absolute;bottom:24px;left:28px;right:24px;z-index:1;font-size:8px;letter-spacing:2px;color:#f5f3efbd}
+.events-status{color:#b7b9ba;font-size:11px;line-height:1.6;max-width:230px}.event-source{display:inline-block;font-size:10px;text-decoration:underline;text-underline-offset:3px;color:#b7b9ba;padding:8px 0}.events-booking-note{font-size:12px;color:#a5a7aa;line-height:1.7;margin:24px 0 0;max-width:750px}
+@media(max-width:900px){.contact-editorial .contact-layout{grid-template-columns:1fr;gap:36px}.contact-visual{height:360px;order:2;border-radius:65px 12px 12px 12px}#contacto.contact-editorial{padding:55px 6vw}.contact-editorial .contact-copy{max-width:540px}.events-status{grid-column:2}}
+@media(max-width:600px){.contact-editorial .contact-buttons .btn{width:100%;gap:12px;font-size:10px;padding:17px 15px}.contact-visual{height:330px}.contact-signature{font-size:32px;right:22px}.contact-editorial .contact-data{font-size:12px}.hero-bottom{gap:16px;flex-wrap:wrap;line-height:1.6}.experience-dots button{min-height:44px}.experience-pause{min-height:44px}#trip-form .btn{white-space:normal;line-height:1.5;min-height:52px}.floating-wa{width:50px;height:50px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+@media(max-width:380px){.quote-benefits,.faq-perks{grid-template-columns:1fr;gap:16px}.quote-benefits li,.faq-perks li{border:0;padding:0;display:grid;grid-template-columns:40px 1fr;column-gap:12px;text-align:left}.quote-benefits svg,.faq-perks .faq-icon{grid-row:1/3;margin:0}.quote-benefits h3,.faq-perks h3{font-size:19px}.quote-benefits p,.faq-perks p{grid-column:2;font-size:12px;margin:4px 0 0}.faq-help{flex-wrap:wrap;justify-content:flex-start;gap:16px}.faq-help>p{flex:0 0 100%;text-align:left;transform:none}.faq-help .faq-help-arrow{display:none}#contacto.contact-editorial h2{font-size:68px}.upcoming-events .experience-date strong{font-size:36px}}
+
+@media(max-width:900px){.upcoming-events .experience-date strong{font-size:30px;white-space:nowrap;letter-spacing:-.5px}.upcoming-events .experience-action small{color:#a5a7aa;font-size:9px}.events-status{font-size:12px}}
+/* Mobile section joins: overlap painted edges to avoid subpixel seams. */
+@media(max-width:850px){
+ main>section{border-top:0!important;border-bottom:0!important}
+ main>section+section{margin-top:-1px}
+ .events-transition,.about-wave,.transfers-bottom-wave,.excursions-bottom-wave,.services-bottom-wave,.quote-wave,.faq-bottom-wave{display:block;backface-visibility:hidden}
+ .events-transition,.transfers-bottom-wave,.excursions-bottom-wave,.services-bottom-wave,.faq-bottom-wave,.quote-wave-bottom{bottom:-2px}
+ .events-transition svg{display:block}
+ .about-wave,.quote-wave-top{top:-2px}
+ .about-next-preview{margin-bottom:-1px}
+ /* Keep the ends of adjoining dark backgrounds identical to the SVG fill. */
+ #servicios.services-editorial{background-color:var(--dark);background-image:radial-gradient(ellipse at 92% 48%,#a919241c,transparent 46%),linear-gradient(var(--dark) 0%,var(--dark) 12%,#0e1012 100%)}
+ .excursions-bottom-wave path[stroke],.services-bottom-wave path[stroke]{stroke:none}
+}

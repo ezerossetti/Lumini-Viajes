@@ -4,7 +4,7 @@ const experiences = [
     "label": "Festivales y música",
     "description": "Cosquín Rock, Folklore de Cosquín, Jesús María, Oktoberfest y recitales. Coordinamos el traslado para que disfrutes desde el primer momento.",
     "link": "https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20festivales%20y%20m%C3%BAsica.",
-    "image": "assets/images/experiencias/festivales.png?v=2",
+    "image": "assets/images/experiencias/festivales-web.webp?v=2",
     "alt": "Escenario de Cosquín Rock con público al aire libre"
   },
   {
@@ -12,7 +12,7 @@ const experiences = [
     "label": "Música electrónica",
     "description": "Fiestas, festivales y eventos de música electrónica. Contanos a dónde vas, con quiénes viajás y qué horarios necesitás.",
     "link": "https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20m%C3%BAsica%20electr%C3%B3nica.",
-    "image": "assets/images/experiencias/electronica.png",
+    "image": "assets/images/experiencias/electronica-web.webp",
     "alt": "Evento de música electrónica con luces y láseres azules"
   },
   {
@@ -20,7 +20,7 @@ const experiences = [
     "label": "Eventos deportivos",
     "description": "Partidos, torneos, competencias y carreras. Organizamos el viaje según el grupo, el destino y los horarios del evento.",
     "link": "https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20eventos%20deportivos.",
-    "image": "assets/images/experiencias/deportes.png",
+    "image": "assets/images/experiencias/deportes-web.webp",
     "alt": "Corredores participando en una carrera"
   },
   {
@@ -28,7 +28,7 @@ const experiences = [
     "label": "Culturales y especiales",
     "description": "Fiestas populares, eventos estudiantiles, encuentros corporativos y celebraciones. Armamos una propuesta para tu grupo.",
     "link": "https://wa.me/5493541272605?text=Hola%20Lumini%20Viajes%2C%20quiero%20consultar%20por%20traslados%20para%20culturales%20y%20especiales.",
-    "image": "assets/images/experiencias/cultura.png",
+    "image": "assets/images/experiencias/cultura-web.webp",
     "alt": "Celebración nocturna con fogata y público"
   }
 ];

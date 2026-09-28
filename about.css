@@ -30,7 +30,7 @@
 .about-editorial-signoff{grid-column:1;grid-row:3;display:flex;align-items:center;gap:30px;margin-top:4px}
 .about-editorial-signoff p{margin:0}.about-editorial-signoff .about-handwriting{transform:rotate(-7deg);min-width:46%;padding-bottom:3px}
 .about-signoff-type{padding:12px 0 12px 30px;border-left:1px solid #aaa;font-size:8px;letter-spacing:3.5px;line-height:2.1;color:#707070}
-.about-next-preview{position:relative;background:linear-gradient(#111214dc,#111214),url('assets/images/lumini-sierras.jpg') center 50%/cover;padding:113px 8vw 26px;min-height:190px;color:white}
+.about-next-preview{position:relative;background:linear-gradient(#111214dc,#111214),url('assets/images/lumini-sierras-web.webp') center 50%/cover;padding:113px 8vw 26px;min-height:190px;color:white}
 .about-wave{position:absolute;left:0;top:-1px;width:100%;height:90px;fill:var(--about-paper);pointer-events:none}
 .about-next-inner{max-width:1500px;margin:auto;display:flex;align-items:center;gap:clamp(35px,7vw,130px)}
 .about-next-inner>a{font-size:9px;letter-spacing:3.5px;display:flex;gap:22px;align-items:center;white-space:nowrap}.about-next-inner>a::before{content:"";width:40px;border-top:1px solid #ddd}
