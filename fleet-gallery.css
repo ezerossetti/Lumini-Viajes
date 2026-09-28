@@ -1,0 +1,21 @@
+.experience-stage,.fleet-gallery-view{touch-action:pan-y pinch-zoom}
+.services-gallery-open{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:zoom-in;z-index:2;border-radius:inherit}
+.services-gallery-open:focus-visible{outline:3px solid #e84452;outline-offset:-5px}
+.services-photo .services-photo-link{z-index:3}
+.fleet-gallery{padding:0;border:1px solid #ffffff20;border-radius:20px;background:#101113;color:#f5f3ef;width:min(1000px,94vw);max-width:94vw;max-height:94dvh;overflow:auto;box-shadow:0 28px 90px #0008}
+.fleet-gallery::backdrop{background:#050607e8}
+.fleet-gallery-inner{padding:24px}
+.fleet-gallery header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.fleet-gallery header p{font-size:9px;letter-spacing:2px;color:#a8a8aa;margin:0 0 6px}
+.fleet-gallery h2{font:700 32px/1 var(--display);margin:0}
+.fleet-gallery button{cursor:pointer;color:#fff;border:1px solid #ffffff40;background:#151719;border-radius:50%;width:44px;height:44px;flex-shrink:0;font-size:22px}
+.fleet-gallery button:focus-visible{outline:2px solid #ef5962;outline-offset:3px}
+.fleet-gallery-view{position:relative;background:#08090a;border-radius:12px;overflow:hidden}
+.fleet-gallery-view>img{width:100%;height:min(57dvh,620px);object-fit:contain}
+.fleet-prev,.fleet-next{position:absolute;top:50%;transform:translateY(-50%)}.fleet-prev{left:12px}.fleet-next{right:12px}
+.fleet-caption{text-align:center;font-size:12px;line-height:1.5;margin:15px 0;color:#ccc}
+.fleet-thumbnails{display:flex;justify-content:center;gap:10px}
+.fleet-thumbnails button{width:64px;height:58px;border-radius:6px;padding:3px;overflow:hidden}
+.fleet-thumbnails img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.fleet-thumbnails [aria-pressed=true]{border:2px solid #e12a34}
+@media(max-width:600px){.fleet-gallery-inner{padding:14px}.fleet-gallery h2{font-size:27px}.fleet-gallery-view>img{height:54dvh}.fleet-prev{left:5px}.fleet-next{right:5px}.fleet-gallery{border-radius:14px}}

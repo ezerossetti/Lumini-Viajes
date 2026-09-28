@@ -65,6 +65,7 @@ tripForm?.addEventListener("submit", event => {
   const message = [
     "Hola Lumini Viajes, quiero cotizar un viaje.",
     `Servicio: ${data.get("service")}`,
+    `Recorrido: ${data.get("journey") || "Solo ida"}`,
     `Origen: ${data.get("from")}`,
     `Destino: ${data.get("to")}`,
     `Pasajeros: ${data.get("people")}`,

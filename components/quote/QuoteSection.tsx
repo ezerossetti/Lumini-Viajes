@@ -8,7 +8,7 @@ export default function QuoteSection(){return (<section className="section build
           <label>Origen<input name="from" defaultValue="Villa Carlos Paz" required/></label>
           <label>Destino<input name="to" placeholder="¿A dónde viajás?" required/></label>
           <label>Pasajeros<input name="people" type="number" min="1" placeholder="Ej. 15" required/></label>
-          <label className="full">Fecha aproximada<input name="date" type="date"/></label>
-          <label className="full">Contanos un poco más<textarea name="note" rows="3" placeholder="Horarios, ida y vuelta, equipaje, etc."></textarea></label>
+          <label>Recorrido<select name="journey"><option>Solo ida</option><option>Ida y vuelta</option></select></label><label>Fecha aproximada<input name="date" type="date"/></label>
+          <label className="full">Contanos un poco más<textarea name="note" rows="3" placeholder="Horarios de salida y regreso, equipaje, etc."></textarea></label>
           <button className="btn btn-red full" type="submit">Preparar consulta por WhatsApp →</button>
         <p className="quote-form-note">El botón prepara tu mensaje para WhatsApp. La consulta no confirma una reserva.</p></form></div><svg className="quote-wave quote-wave-bottom" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C140 4 220 92 410 70S580 51 760 72 1040 7 1170 30 1350 14 1440 0V100H0Z" fill="var(--paper)"/></svg></section>);}

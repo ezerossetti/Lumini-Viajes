@@ -63,5 +63,6 @@ const experiences = [
  root.addEventListener('focusin',()=>focused=true);root.addEventListener('focusout',e=>focused=root.contains(e.relatedTarget));
  root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();manual(current+(e.key==='ArrowLeft'?-1:1));}});
  motion.addEventListener('change',e=>{if(e.matches){paused=true;updatePause();}});
+ window.luminiSwipe(stage,delta=>manual(current+delta));
  show(0,false);updatePause();restart();
 })();
