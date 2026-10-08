@@ -11,7 +11,7 @@ function renderEvents(now=Date.now()){
  const upcoming=events.filter(e=>!e.end||new Date(e.end).getTime()>now);
  list.innerHTML=upcoming.map(e=>`<article class="experience-card">
  <div class="experience-date"><strong>${e.day}</strong>${e.month}<br>${e.year}</div>
- <div class="experience-info"><h4>${e.title}</h4><p>${e.place}</p><a class="event-source" href="${e.source}" target="_blank" rel="noopener">Información oficial ↗</a></div>
+ <div class="experience-info"><h4>${e.title}</h4><p>${e.place}</p><a class="event-source" href="${e.source}" target="_blank" rel="noopener">Información oficial <svg class="ui-arrow-ne" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
  <p class="events-status">${e.detail}</p>
  <div class="experience-action"><small>Consultar disponibilidad</small><a href="${waBase+encodeURIComponent(`Hola Lumini Viajes, quiero consultar disponibilidad y presupuesto de traslado para ${e.title}.`)}" target="_blank" rel="noopener">Consultar →</a></div></article>`).join('')||'<p class="events-status">Consultanos por los próximos eventos.</p>';
 }
