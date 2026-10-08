@@ -19,6 +19,13 @@
 .quote-form-heading h3{font:700 26px/1 var(--display);text-transform:uppercase;color:#151515;margin:0 0 7px}.quote-form-heading p{font-size:10px;line-height:1.5;color:#777;margin:0}
 #armatuviaje .trip-form label{font-size:10px;letter-spacing:0;text-transform:none;font-weight:500;gap:7px;color:#4d4b47}
 #armatuviaje .trip-form input,#armatuviaje .trip-form select,#armatuviaje .trip-form textarea{border-color:#d5d0c6;background:#f8f6f1;font-size:12px;padding:12px;min-height:43px;border-radius:3px}
+#armatuviaje .quote-date-control{position:relative;display:block;width:100%}
+#armatuviaje .quote-date-control input[name="date"]{padding-right:48px}
+#armatuviaje .quote-date-picker-native{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}
+#armatuviaje .quote-date-picker-button{position:absolute;top:0;right:0;width:44px;height:100%;display:grid;place-items:center;padding:0;border:0;background:transparent;color:#68645e;cursor:pointer}
+#armatuviaje .quote-date-picker-button svg{width:18px;height:18px}
+#armatuviaje .quote-date-picker-button:hover{color:var(--red)}
+#armatuviaje .quote-date-picker-button:focus-visible{outline:2px solid var(--red);outline-offset:-4px;border-radius:3px}
 #armatuviaje .trip-form select{padding-right:32px}#armatuviaje .trip-form textarea{min-height:92px}#armatuviaje .trip-form input:focus,#armatuviaje .trip-form select:focus,#armatuviaje .trip-form textarea:focus{border-color:var(--red);background:#fff}
 #armatuviaje .trip-form .btn{font-size:9px;letter-spacing:1.2px;gap:10px;min-height:48px;padding:14px 12px;border-radius:3px}
 .quote-form-note{grid-column:1/-1;text-align:center;font-size:9px;line-height:1.6;color:#8b867e;margin:0}
