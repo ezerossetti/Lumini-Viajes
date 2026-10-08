@@ -1,8 +1,8 @@
 // Event dates verified against organizers on 2026-09-28. Dates describe the event, not a confirmed departure.
 const events = [
- {day:"2–12",month:"OCT",year:"2026",title:"Oktoberfest",place:"Villa General Belgrano · Córdoba",detail:"Programación del 2 al 4 y del 9 al 12 de octubre.",end:"2026-10-13T06:00:00-03:00",source:"https://oktoberfestargentina.com.ar/grilla2026/"},
+ {day:"2 al 12",month:"OCT",year:"2026",title:"Oktoberfest",place:"Villa General Belgrano · Córdoba",detail:"Programación del 2 al 4 y del 9 al 12 de octubre.",end:"2026-10-13T06:00:00-03:00",source:"https://oktoberfestargentina.com.ar/grilla2026/"},
  {day:"—",month:"2027",year:"",title:"Festival Nacional de Jesús María",place:"Jesús María · Córdoba",detail:"Fecha 2027 pendiente de confirmación oficial.",end:null,source:"https://festival.org.ar/"},
- {day:"6–7",month:"FEB",year:"2027",title:"Cosquín Rock",place:"Santa María de Punilla · Córdoba",detail:"6 y 7 de febrero de 2027.",end:"2027-02-08T06:00:00-03:00",source:"https://cosquinrock.net/preguntas-frecuentes/"}
+ {day:"6 al 7",month:"FEB",year:"2027",title:"Cosquín Rock",place:"Santa María de Punilla · Córdoba",detail:"6 y 7 de febrero de 2027.",end:"2027-02-08T06:00:00-03:00",source:"https://cosquinrock.net/preguntas-frecuentes/"}
 ];
 const waBase="https://wa.me/5493541272605?text=";
 const list=document.querySelector("#events-list");
@@ -58,12 +58,12 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 const tripForm = document.querySelector("#trip-form");
 tripForm?.addEventListener("submit", event => {
   event.preventDefault();
-  if(dateInput) dateInput.min=localDateISO();
-  for(const name of ['from','to']){const field=tripForm.elements.namedItem(name);field.value=field.value.trim();}
+  for(const [name,maxLength] of [['from',100],['to',100],['note',500]]){const field=tripForm.elements.namedItem(name);field.value=field.value.trim().slice(0,maxLength);}
+  peopleInput.value=peopleInput.value.replace(/\D/g,'').slice(0,5);
   if(!tripForm.reportValidity())return;
   const data = new FormData(tripForm);
   const message = [
-    "Hola Lumini Viajes, quiero cotizar un viaje.",
+    "Hola Lumini Viajes, quiero cotizar un viaje!!!",
     `Servicio: ${data.get("service")}`,
     `Recorrido: ${data.get("journey") || "Solo ida"}`,
     `Origen: ${data.get("from")}`,
@@ -75,10 +75,58 @@ tripForm?.addEventListener("submit", event => {
   window.reviewQuote(message);
 });
 
-// Fecha mínima del formulario: hoy.
+// Máscara numérica DD-MM-YYYY y validación de calendario.
 const dateInput = document.querySelector('input[name="date"]');
+const datePickerInput = document.querySelector('.quote-date-picker-native');
+const datePickerButton = document.querySelector('.quote-date-picker-button');
+const peopleInput = document.querySelector('input[name="people"]');
 function localDateISO(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');}
-if(dateInput){dateInput.min=localDateISO();dateInput.addEventListener('focus',()=>dateInput.min=localDateISO());}
+function maskDateInput(){
+ const cursor=dateInput.selectionStart??dateInput.value.length;
+ const digitsBeforeCursor=dateInput.value.slice(0,cursor).replace(/\D/g,'').length;
+ const digits=dateInput.value.replace(/\D/g,'').slice(0,8);
+ const formatted=digits.slice(0,2)+(digits.length>=2?'-':'')+digits.slice(2,4)+(digits.length>=4?'-':'')+digits.slice(4);
+ let nextCursor=0,counted=0;
+ while(nextCursor<formatted.length&&counted<digitsBeforeCursor){if(/\d/.test(formatted[nextCursor]))counted++;nextCursor++;}
+ while(formatted[nextCursor]==='-')nextCursor++;
+ dateInput.value=formatted;
+ dateInput.setSelectionRange(nextCursor,nextCursor);
+}
+function validateDateInput(){
+ const value=dateInput.value;
+ let message='';
+ if(value&&!/^\d{2}-\d{2}-\d{4}$/.test(value))message='Ingresá la fecha con el formato DD-MM-YYYY.';
+ else if(value){
+  const [day,month,year]=value.split('-').map(Number);
+  const leapYear=year%4===0&&(year%100!==0||year%400===0);
+  const daysInMonth=[31,leapYear?29:28,31,30,31,30,31,31,30,31,30,31][month-1]||0;
+  if(year<1||month<1||month>12||day<1||day>daysInMonth)message='Ingresá una fecha válida.';
+  else if(`${String(year).padStart(4,'0')}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`<localDateISO())message='La fecha no puede ser anterior a hoy.';
+ }
+ dateInput.setCustomValidity(message);
+}
+if(dateInput){
+ dateInput.addEventListener('input',()=>{maskDateInput();validateDateInput();});
+ dateInput.addEventListener('keydown',event=>{
+  const cursor=dateInput.selectionStart;
+  if(event.key!=='Backspace'||event.ctrlKey||event.metaKey||event.altKey||cursor===null||cursor!==dateInput.selectionEnd||cursor===0||dateInput.value[cursor-1]!=='-')return;
+  event.preventDefault();
+  dateInput.setRangeText('',cursor-2,cursor-1,'preserve');
+  dateInput.dispatchEvent(new Event('input',{bubbles:true}));
+ });
+}
+datePickerButton?.addEventListener('click',()=>{
+ datePickerInput.min=localDateISO();
+ if(typeof datePickerInput.showPicker==='function')datePickerInput.showPicker();
+ else datePickerInput.click();
+});
+datePickerInput?.addEventListener('change',()=>{
+ const [year,month,day]=datePickerInput.value.split('-');
+ dateInput.value=datePickerInput.value?`${day}-${month}-${year}`:'';
+ dateInput.dispatchEvent(new Event('input',{bubbles:true}));
+ dateInput.focus();
+});
+peopleInput?.addEventListener('input',()=>{peopleInput.value=peopleInput.value.replace(/\D/g,'').slice(0,5);});
 
 
 // =========================================================
