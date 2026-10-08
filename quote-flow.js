@@ -4,7 +4,7 @@
  const status=document.createElement('p');status.className='quote-prefill-status full';status.setAttribute('role','status');form.querySelector('.quote-form-heading').after(status);
  document.querySelectorAll('.destination-content').forEach(content=>{
   const name=content.querySelector('h3').innerHTML.replace(/<br\s*\/?>(\s*)/gi,' ').replace(/<[^>]*>/g,'').trim();
-  const a=document.createElement('a');a.href='#armatuviaje';a.className='destination-quote';a.textContent='Consultar viaje →';a.dataset.quoteService='Excursión';a.dataset.quoteDestination=name;content.append(a);
+  const a=content.querySelector('.destination-link');if(!a)return;a.href='#armatuviaje';a.dataset.quoteService='Excursión';a.dataset.quoteDestination=name;
  });
  document.addEventListener('click',event=>{
   const a=event.target.closest('[data-quote-service]');if(!a)return;event.preventDefault();
