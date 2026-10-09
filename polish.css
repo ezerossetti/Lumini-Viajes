@@ -48,3 +48,10 @@ svg.ui-arrow-ne{display:inline-block;width:1em;height:1em;min-width:1em;flex-shr
  #experiencias .experience-stage .experience-benefits li:nth-child(even){padding-right:0}
  #experiencias .experience-stage .experience-benefits svg{flex-shrink:0}
 }
+
+/* Final credits row: understated and readable on mobile. */
+body > footer{flex-wrap:wrap}
+body > footer .footer-credits{order:10;flex:0 0 100%;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;padding-top:20px;border-top:1px solid #ffffff12;font-size:10px;line-height:1.7;letter-spacing:.3px;text-transform:none;color:#a3a3a3}
+body > footer .footer-design{white-space:nowrap}
+body > footer .footer-design strong{color:#eee;font-weight:700;letter-spacing:1.5px;margin-left:4px}
+@media(max-width:600px){body > footer .footer-credits{flex-direction:column;align-items:flex-start;gap:8px}}
