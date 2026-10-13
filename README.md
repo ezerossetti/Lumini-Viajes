@@ -24,3 +24,6 @@ Navbar y Cotización tienen fuentes en `components/navbar` y `components/quote`.
 
 Las fechas y fuentes de eventos están en `script.js`. Ver `PUBLICACION.md` para publicar en Vercel. Revisarlas antes de cada temporada. Una consulta no confirma una reserva.
 Las imágenes en uso están optimizadas en WebP; se quitaron duplicados sin referencias. El historial de Git conserva las versiones anteriores. Los videos originales se mantienen para uso futuro.
+
+## Alcance de publicación actual
+Se publica la landing principal. La carpeta seo se conserva como trabajo pendiente y queda excluida de dist y del sitemap. Los destinos consultan desde el formulario de la home. Se conserva la página auxiliar de créditos fotográficos para las atribuciones.

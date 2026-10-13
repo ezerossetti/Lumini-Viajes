@@ -1,7 +1,7 @@
 // Event dates verified against organizers on 2026-09-28. Dates describe the event, not a confirmed departure.
 const events = [
  {day:"2 al 12",month:"OCT",year:"2026",title:"Oktoberfest",place:"Villa General Belgrano · Córdoba",detail:"Programación del 2 al 4 y del 9 al 12 de octubre.",end:"2026-10-13T06:00:00-03:00",source:"https://oktoberfestargentina.com.ar/grilla2026/"},
- {day:"—",month:"2027",year:"",title:"Festival Nacional de Jesús María",place:"Jesús María · Córdoba",detail:"Fecha 2027 pendiente de confirmación oficial.",end:null,source:"https://festival.org.ar/"},
+ {day:"7 al 17",month:"ENE",year:"2027",title:"Festival Nacional de Jesús María",place:"Jesús María · Córdoba",detail:"Del 7 al 17 de enero de 2027.",end:"2027-01-18T06:00:00-03:00",source:"https://festival.org.ar/"},
  {day:"6 al 7",month:"FEB",year:"2027",title:"Cosquín Rock",place:"Santa María de Punilla · Córdoba",detail:"6 y 7 de febrero de 2027.",end:"2027-02-08T06:00:00-03:00",source:"https://cosquinrock.net/preguntas-frecuentes/"}
 ];
 const waBase="https://wa.me/5493541272605?text=";
@@ -11,7 +11,7 @@ function renderEvents(now=Date.now()){
  const upcoming=events.filter(e=>!e.end||new Date(e.end).getTime()>now);
  list.innerHTML=upcoming.map(e=>`<article class="experience-card">
  <div class="experience-date"><strong>${e.day}</strong>${e.month}<br>${e.year}</div>
- <div class="experience-info"><h4>${e.title}</h4><p>${e.place}</p><a class="event-source" href="${e.source}" target="_blank" rel="noopener">Información oficial ↗</a></div>
+ <div class="experience-info"><h4>${e.title}</h4><p>${e.place}</p><a class="event-source" href="${e.source}" target="_blank" rel="noopener">Información oficial <svg class="ui-arrow-ne" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
  <p class="events-status">${e.detail}</p>
  <div class="experience-action"><small>Consultar disponibilidad</small><a href="${waBase+encodeURIComponent(`Hola Lumini Viajes, quiero consultar disponibilidad y presupuesto de traslado para ${e.title}.`)}" target="_blank" rel="noopener">Consultar →</a></div></article>`).join('')||'<p class="events-status">Consultanos por los próximos eventos.</p>';
 }

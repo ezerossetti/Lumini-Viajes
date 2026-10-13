@@ -37,3 +37,21 @@
  #servicios.services-editorial{background-color:var(--dark);background-image:radial-gradient(ellipse at 92% 48%,#a919241c,transparent 46%),linear-gradient(var(--dark) 0%,var(--dark) 12%,#0e1012 100%)}
  .excursions-bottom-wave path[stroke],.services-bottom-wave path[stroke]{stroke:none}
 }
+
+/* Vector arrows render consistently in Safari, without emoji substitution. */
+svg.ui-arrow-ne{display:inline-block;width:1em;height:1em;min-width:1em;flex-shrink:0;vertical-align:-.12em;fill:none;stroke:currentColor;pointer-events:none}
+/* Give the mobile benefits panel breathing room on both sides. */
+@media(max-width:767px){
+ #experiencias .experience-stage .experience-benefits{box-sizing:border-box;padding:16px;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 0}
+ #experiencias .experience-stage .experience-benefits li{min-width:0;gap:9px;padding:0 10px}
+ #experiencias .experience-stage .experience-benefits li:nth-child(odd){padding-left:0}
+ #experiencias .experience-stage .experience-benefits li:nth-child(even){padding-right:0}
+ #experiencias .experience-stage .experience-benefits svg{flex-shrink:0}
+}
+
+/* Final credits row: understated and readable on mobile. */
+body > footer{flex-wrap:wrap}
+body > footer .footer-credits{order:10;flex:0 0 100%;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;padding-top:20px;border-top:1px solid #ffffff12;font-size:10px;line-height:1.7;letter-spacing:.3px;text-transform:none;color:#a3a3a3}
+body > footer .footer-design{white-space:nowrap}
+body > footer .footer-design strong{color:#eee;font-weight:700;letter-spacing:1.5px;margin-left:4px}
+@media(max-width:600px){body > footer .footer-credits{flex-direction:column;align-items:flex-start;gap:8px}}
